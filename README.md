@@ -1,2 +1,2 @@
-# GuruBooks
-GuruBooks is a market place for buying and selling of tech books
+# Expense Saver 
+Expense saver helps you save all your expenses and calculate the VAT (Value added tax) associated to each expense
