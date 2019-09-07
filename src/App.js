@@ -1,12 +1,26 @@
 import React from "react";
-// import ExpenseSaver from './components/expenseSaverComponent'
-// import AddExpenseForm from './components/common/formComponent';
-import { Header } from "./components/layout/Header";
-import { Content } from "./components/layout/Content";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
-export const App = () => (
-  <main>
-    <Header />
-    <Content />
-  </main>
-);
+import "./App.css";
+
+import Home from "./views/Home";
+import Login from "./views/Login";
+import Signup from "./views/Signup";
+import Error from "./views/Error";
+
+function App() {
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path="/login" component={Login} />
+          <Route component={Error} />
+        </Switch>
+      </BrowserRouter>
+    </div>
+  );
+}
+
+export default App;
